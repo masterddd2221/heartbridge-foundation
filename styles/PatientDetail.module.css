@@ -1,0 +1,89 @@
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.photo {
+  display: block;
+  margin: 0 auto 30px;
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.section {
+  margin-bottom: 28px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #d72638;
+}
+
+.section p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.donateBox {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.donateButton {
+  display: inline-block;
+  background: #d72638;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.donateButton:hover {
+  background: #a01c2a;
+  transform: scale(1.05);
+}
+
+.backLink {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.backLink a {
+  color: #555;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.backLink a:hover {
+  color: #d72638;
+}
+
+.notFound {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4rem;
+  color: #999;
+}

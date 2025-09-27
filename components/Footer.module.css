@@ -1,0 +1,41 @@
+.footer {
+  background: #fff;
+  color: #555;
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 20px 10px 28px 10px;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between logo & text */
+  font-weight: bold;
+  font-size: 1rem;
+  color: #d32f2f;
+}
+
+.logoImg {
+  border-radius: 50%; /* make logo round for style */
+}
+
+.contact a {
+  color: #d32f2f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.copy {
+  font-size: 0.85rem;
+  color: #888;
+}

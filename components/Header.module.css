@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #d32f2f;
+  text-decoration: none;
+  gap: 10px; /* space between img and text */
+}
+
+.logoImg {
+  border-radius: 50%; /* if you want it rounded */
+}
+
+
+.logo span {
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+
+/* Nav links (desktop default) */
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.navLink {
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    display: none;          /* hidden by default */
+    flex-direction: column; /* stack links */
+    gap: 12px;
+    width: 100%;
+    padding: 12px 0;
+    background: #fff;
+  }
+
+  .nav.show {
+    display: flex; /* show when menuOpen = true */
+  }
+
+  .navLink {
+    padding: 10px;
+    text-align: center;
+  }
+}

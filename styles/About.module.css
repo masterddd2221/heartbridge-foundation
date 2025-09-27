@@ -1,0 +1,119 @@
+.hero {
+  position: relative;
+  height: 60vh;
+  background: url("/images/about-hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.heroSubtitle {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+}
+
+.split .text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.story {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.text {
+  flex: 1;
+}
+
+.text h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* 🌍 Mobile responsiveness */
+@media (max-width: 768px) {
+  .split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text {
+    order: 1;
+  }
+
+  .imageWrapper {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .text h2 {
+    font-size: 1.6rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}

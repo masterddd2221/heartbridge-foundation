@@ -1,0 +1,154 @@
+/* styles/Home.module.css */
+.container {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.heroContent {
+  animation: fadeIn 1.2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btnPrimary {
+  background: white;
+  color: #3b82f6;
+}
+
+.btnPrimary:hover {
+  background: #f3f4f6;
+}
+
+.btnSecondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Featured Patients */
+.featured {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #3b82f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #f9fafb;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footerLinks {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footerLinks a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}

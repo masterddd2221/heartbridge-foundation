@@ -1,0 +1,108 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: #444;
+  text-align: justify;
+}
+
+/* Back link neatly aligned bottom */
+.backLinkBox {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.backLink:hover {
+  background: #ddd;
+}
+
+/* contact + socials styles */
+.contactBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f7f7f8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.18s ease;
+}
+
+.contactLink:hover {
+  background: #eee;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #d1435b;
+  font-size: 18px;
+  transition: transform 0.16s ease, background 0.16s ease;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  transform: translateY(-4px);
+  background: #e9eef4;
+}
