@@ -46,7 +46,7 @@ export default function Doctor() {
         >
           Dr. Joel S. Richardson is a highly respected cardiologist with over 15 years of
           clinical and research experience in the diagnosis, treatment, and prevention of
-          cardiovascular diseases. A graduate of [insert medical school/university], Dr.
+          cardiovascular diseases. A graduate of  <i>University of Southampton</i>, Dr.
           Richardson has dedicated his career to advancing heart health and improving
           patient outcomes, particularly in underserved communities where access to quality
           medical care is often limited.

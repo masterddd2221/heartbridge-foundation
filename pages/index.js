@@ -48,7 +48,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <p>© 2025 Patient Portal. All rights reserved.</p>
+
         <div className={styles.footerLinks}>
           <Link href="/about">About</Link>
           <Link href="/patients">Patients</Link>

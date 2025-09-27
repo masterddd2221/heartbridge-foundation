@@ -1,0 +1,97 @@
+/* styles/Contact.module.css */
+
+.contactSection {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.contactSection h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.form input,
+.form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #d1435b;
+  box-shadow: 0 0 8px rgba(209, 67, 91, 0.4);
+}
+
+.form button {
+  background: #d1435b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form button:hover {
+  background: #b1324a;
+}
+
+.statusMessage {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.emailDirect {
+  margin-top: 28px;
+  text-align: center;
+  color: #444;
+}
+
+.emailDirect a {
+  color: #d1435b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.emailDirect a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .contactSection {
+    margin: 40px auto;
+    padding: 12px;
+  }
+
+  .contactSection h1 {
+    font-size: 1.8rem;
+  }
+
+  .form {
+    padding: 20px;
+  }
+}
+

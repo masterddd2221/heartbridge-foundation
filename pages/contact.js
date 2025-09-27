@@ -1,7 +1,43 @@
 "use client";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  const [status, setStatus] = useState(""); // success or error
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+    setError("");
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    // Validate email
+    const email = data.get("email");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("❌ Please enter a valid email address.");
+      return;
+    }
+
+    const response = await fetch("https://formspree.io/f/xzzjdjep", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setStatus("✅ Message sent successfully! We’ll get back to you soon.");
+      form.reset();
+    } else {
+      setError("⚠️ Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <main style={{ maxWidth: 600, margin: "60px auto", padding: 16 }}>
       <motion.h1
@@ -14,6 +50,7 @@ export default function Contact() {
       </motion.h1>
 
       <motion.form
+        onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -26,16 +63,17 @@ export default function Contact() {
           borderRadius: 14,
           boxShadow: "0 6px 18px rgba(0,0,0,0.08)",
         }}
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert("Message sent! (form is demo only)");
-        }}
       >
         <motion.input
-          whileFocus={{ scale: 1.02, borderColor: "#d1435b", boxShadow: "0 0 8px rgba(209,67,91,0.4)" }}
           type="text"
+          name="name"
           placeholder="Your Name"
           required
+          whileFocus={{
+            scale: 1.02,
+            borderColor: "#d1435b",
+            boxShadow: "0 0 8px rgba(209,67,91,0.4)",
+          }}
           style={{
             padding: 12,
             borderRadius: 8,
@@ -45,10 +83,15 @@ export default function Contact() {
           }}
         />
         <motion.input
-          whileFocus={{ scale: 1.02, borderColor: "#d1435b", boxShadow: "0 0 8px rgba(209,67,91,0.4)" }}
           type="email"
+          name="email"
           placeholder="Your Email"
           required
+          whileFocus={{
+            scale: 1.02,
+            borderColor: "#d1435b",
+            boxShadow: "0 0 8px rgba(209,67,91,0.4)",
+          }}
           style={{
             padding: 12,
             borderRadius: 8,
@@ -58,10 +101,15 @@ export default function Contact() {
           }}
         />
         <motion.textarea
-          whileFocus={{ scale: 1.02, borderColor: "#d1435b", boxShadow: "0 0 8px rgba(209,67,91,0.4)" }}
+          name="message"
           placeholder="Your Message"
           rows={5}
           required
+          whileFocus={{
+            scale: 1.02,
+            borderColor: "#d1435b",
+            boxShadow: "0 0 8px rgba(209,67,91,0.4)",
+          }}
           style={{
             padding: 12,
             borderRadius: 8,
@@ -71,9 +119,9 @@ export default function Contact() {
           }}
         />
         <motion.button
+          type="submit"
           whileHover={{ scale: 1.05, backgroundColor: "#b1324a" }}
           whileTap={{ scale: 0.97 }}
-          type="submit"
           style={{
             background: "#d1435b",
             color: "#fff",
@@ -83,24 +131,23 @@ export default function Contact() {
             fontWeight: 600,
             fontSize: 17,
             cursor: "pointer",
-            transition: "all 0.2s ease",
           }}
         >
           Send Message
         </motion.button>
-      </motion.form>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.6 }}
-        style={{ marginTop: 28, color: "#444", textAlign: "center" }}
-      >
-        Or email us:{" "}
-        <a href="mailto:info@heartbridge.org" style={{ color: "#d1435b", fontWeight: 600 }}>
-          info@heartbridge.org
-        </a>
-      </motion.p>
+        {/* Feedback messages */}
+        {status && (
+          <p style={{ color: "green", textAlign: "center", marginTop: 10 }}>
+            {status}
+          </p>
+        )}
+        {error && (
+          <p style={{ color: "red", textAlign: "center", marginTop: 10 }}>
+            {error}
+          </p>
+        )}
+      </motion.form>
     </main>
   );
 }

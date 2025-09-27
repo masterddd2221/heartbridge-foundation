@@ -8,8 +8,8 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      {/* Logo Section */}
-      <div className={styles.logo}>
+      {/* Logo Section (now clickable, goes home) */}
+      <Link href="/" className={styles.logo}>
         <Image
           src="/images/heartbridge-foundation-logo.png"
           alt="HeartBridge Foundation Logo"
@@ -18,7 +18,7 @@ export default function Header() {
           className={styles.logoImg}
         />
         <span>HeartBridge Foundation</span>
-      </div>
+      </Link>
 
       {/* Hamburger button (mobile only) */}
       <button

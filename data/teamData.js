@@ -9,12 +9,11 @@ const teamData = [
     With years of experience in non-profit leadership, Shon ensures our 
     mission to save lives through accessible heart care stays on course.`,
     socials: {
-      twitter: "https://twitter.com/shonpayne",
-      linkedin: "https://www.linkedin.com/in/shon-r-payne",
+      twitter: "https://twitter.com/shonpayne"
     },
     contact: {
       email: "shon@heartbridge.org",
-      phone: "+2348000000001"
+      phone: "+1234800000001"
     }
   },
   {
@@ -26,12 +25,12 @@ const teamData = [
     of clinical and research experience. His expertise guides our medical 
     programs and ensures patients receive world-class treatment.`,
     socials: {
-      twitter: "https://twitter.com/aaransingh",
-      linkedin: "https://www.linkedin.com/in/aaransingh",
+      twitter: "https://twitter.com/AaranS_Singh"
+
     },
     contact: {
       email: "aaran@heartbridge.org",
-      phone: "+2348000000002"
+      phone: "+12134800000002"
     }
   },
   {
@@ -43,12 +42,12 @@ const teamData = [
     From patient intake to partner collaboration, he ensures smooth 
     operations and that every resource is maximized for impact.`,
     socials: {
-      twitter: "https://twitter.com/wilmerg",
-      linkedin: "https://www.linkedin.com/in/wilmermgriffiths",
+      twitter: "https://twitter.com/ilmermgriffiths"
+
     },
     contact: {
       email: "wilmer@heartbridge.org",
-      phone: "+2348000000003"
+      phone: "+1234800000003"
     }
   },
   {
@@ -60,12 +59,11 @@ const teamData = [
     the community. She crafts the stories that highlight our patients’ 
     journeys and inspires others to join our mission.`,
     socials: {
-      twitter: "https://twitter.com/janetpj",
-      linkedin: "https://www.linkedin.com/in/janetpjohnson",
+      twitter: "https://twitter.com/JanetpJohnson1"
     },
     contact: {
       email: "janet@heartbridge.org",
-      phone: "+2348000000004"
+      phone: "+1238000000004"
     }
   }
 ];
