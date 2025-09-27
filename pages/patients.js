@@ -8,19 +8,19 @@ export default function Patients() {
       id: 1,
       img: "/images/patient1.jpeg",
       name: "Mary A.",
-      story: "Mary underwent a life-saving surgery with the support of HeartBridge.",
+      story: "Mary overcame a congenital heart defect after a successful surgery supported by HeartBridge.",
     },
     {
       id: 2,
-      img: "/images/patient2.png",
-      name: "Samuel K.",
-      story: "Samuel received critical medication and counseling thanks to donors.",
+      img: "/images/patient2.jpeg",
+      name: "Jerry J.",
+      story: "Jerry received life-saving medication and ongoing care through HeartBridge’s donor support.",
     },
     {
       id: 3,
-      img: "/images/patient3.png",
-      name: "Fatima L.",
-      story: "Fatima’s recovery was made possible through timely intervention.",
+      img: "/images/patient3.jpeg",
+      name: "Bessie L.",
+      story: "Bessie fully recovered after urgent hospital treatment made possible by HeartBridge.",
     },
   ];
 
