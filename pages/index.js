@@ -8,10 +8,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1>Welcome to Our Patient Portal</h1>
+          <h1>Welcome to HeartBridge Foundation</h1>
           <p>
-            A simple system to view patient records and keep track of important
-            details. Explore the profiles and learn more about each patient.
+            We provide life-saving support for patients with critical medical needs. 
+            Explore their stories and see how compassion changes lives.
           </p>
           <div className={styles.buttons}>
             <Link href="/patients" className={styles.btnPrimary}>
@@ -29,18 +29,18 @@ export default function Home() {
         <h2>Featured Patients</h2>
         <div className={styles.cards}>
           <div className={styles.card}>
-            <h3>John Doe</h3>
-            <p>Living with diabetes and hypertension.</p>
+            <h3>Mary A.</h3>
+            <p>Mary underwent a life-saving heart surgery with the support of HeartBridge.</p>
             <Link href="/patients/1">View Profile</Link>
           </div>
           <div className={styles.card}>
-            <h3>Jane Smith</h3>
-            <p>Recovering from knee surgery, active in rehabilitation.</p>
+            <h3>Samuel P.</h3>
+            <p>Samuel received life-saving medication and regular checkups thanks to donors.</p>
             <Link href="/patients/2">View Profile</Link>
           </div>
           <div className={styles.card}>
-            <h3>Michael Johnson</h3>
-            <p>Asthma patient with a history of allergies.</p>
+            <h3>Bessie L.</h3>
+            <p>Bessie’s full recovery was made possible through urgent intervention.</p>
             <Link href="/patients/3">View Profile</Link>
           </div>
         </div>
@@ -48,7 +48,6 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-
         <div className={styles.footerLinks}>
           <Link href="/about">About</Link>
           <Link href="/patients">Patients</Link>

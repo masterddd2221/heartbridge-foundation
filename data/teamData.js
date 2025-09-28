@@ -9,7 +9,7 @@ const teamData = [
     With years of experience in non-profit leadership, Shon ensures our 
     mission to save lives through accessible heart care stays on course.`,
     socials: {
-      twitter: "https://twitter.com/shonpayne"
+      twitter: "https://twitter.com/shonrpayne"
     },
     contact: {
       email: "shon@heartbridge.org",

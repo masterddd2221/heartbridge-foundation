@@ -1,7 +1,9 @@
+// pages/patients/[id].js
 import { useRouter } from "next/router";
 import patientsData from "../../data/patientsData";
 import styles from "../../styles/PatientDetail.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function PatientDetail() {
   const router = useRouter();
@@ -12,42 +14,94 @@ export default function PatientDetail() {
     return <p className={styles.notFound}>Patient not found.</p>;
   }
 
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>{patient.name}’s Story</h1>
-      <img src={patient.image} alt={patient.name} className={styles.photo} />
+  // Animation variants for reusability
+  const fadeSlideUp = {
+    hidden: { y: 30, opacity: 0 },
+    visible: (i = 1) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: i * 0.3, duration: 0.6 },
+    }),
+  };
 
-      <section className={styles.section}>
+  return (
+    <motion.div
+      className={styles.container}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.h1
+        className={styles.title}
+        variants={fadeSlideUp}
+        custom={0}
+      >
+        {patient.name}’s Story
+      </motion.h1>
+
+      <motion.img
+        src={patient.image}
+        alt={patient.name}
+        className={styles.photo}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+      />
+
+      <motion.section
+        className={styles.section}
+        variants={fadeSlideUp}
+        custom={1}
+      >
         <h2>Background</h2>
         <p>{patient.background}</p>
-      </section>
+      </motion.section>
 
-      <section className={styles.section}>
+      <motion.section
+        className={styles.section}
+        variants={fadeSlideUp}
+        custom={2}
+      >
         <h2>Treatment</h2>
         <p>{patient.treatment}</p>
-      </section>
+      </motion.section>
 
-      <section className={styles.section}>
+      <motion.section
+        className={styles.section}
+        variants={fadeSlideUp}
+        custom={3}
+      >
         <h2>Outcome</h2>
         <p>{patient.outcome}</p>
-      </section>
+      </motion.section>
 
-      <section className={styles.section}>
+      <motion.section
+        className={styles.section}
+        variants={fadeSlideUp}
+        custom={4}
+      >
         <h2>How HeartBridge Helped</h2>
         <p>{patient.support}</p>
-      </section>
+      </motion.section>
 
-      {/* Donate button linking to /donate */}
-      <div className={styles.donateBox}>
+      <motion.div
+        className={styles.donateBox}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8, duration: 0.7 }}
+      >
         <Link href="/donate" className={styles.donateButton}>
           Donate to Support More Patients
         </Link>
-      </div>
+      </motion.div>
 
-      {/* Back link */}
-      <div className={styles.backLink}>
+      <motion.div
+        className={styles.backLink}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.1 }}
+      >
         <Link href="/patients">← Back to Patients</Link>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
