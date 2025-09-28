@@ -1,0 +1,21 @@
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff; /* clean background */
+}
+
+.logo {
+  width: 180px;  /* 🔥 bigger logo */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 1.7rem; /* a bit larger too */
+  font-weight: 600;
+  color: #c53030; /* HeartBridge red */
+  letter-spacing: 1px;
+}
