@@ -1,5 +1,6 @@
 // pages/_app.js
 import { useState, useEffect } from "react";
+import Head from "next/head"; // ✅ import Head
 import "../styles/globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -20,6 +21,13 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Head>
+        <title>HeartBridge Foundation</title>
+        <link rel="icon" href="images/favicon.ico" /> 
+        {/* You can also add high-res versions if you want: */}
+        {/* <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> */}
+        {/* <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> */}
+      </Head>
       <Header />
       <Component {...pageProps} />
       <Footer />
