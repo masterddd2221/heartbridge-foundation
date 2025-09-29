@@ -38,6 +38,7 @@ export default function Header() {
         <Link href="/testimonials" className={styles.navLink}>Testimonials</Link>
         <Link href="/donate" className={styles.navLink}>Donate</Link>
         <Link href="/contact" className={styles.navLink}>Contact</Link>
+        <Link href="/waiting-list" className={styles.navLink}>Waiting List</Link>
       </nav>
     </header>
   );

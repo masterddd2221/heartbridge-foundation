@@ -20,6 +20,9 @@ export default function Home() {
             <Link href="/about" className={styles.btnSecondary}>
               About Us
             </Link>
+            <Link href="/join" className={styles.btnAccent}>
+              Join Waiting List
+            </Link>
           </div>
         </div>
       </section>
@@ -52,6 +55,7 @@ export default function Home() {
           <Link href="/about">About</Link>
           <Link href="/patients">Patients</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/join"><strong>Join Waiting List</strong></Link>
         </div>
       </footer>
     </div>
